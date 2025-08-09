@@ -578,7 +578,7 @@ Nos ayuda a validar interacciones sin efectos secundarios.
 Por ejemplo, para espiar window.alert usamos:
 
 ```javascript
-const alertSpy = vi.spyOn(window, 'alert')
+const alertSpy = vi.spyOn(window, 'alert').mockImplementation(() => {});
 ```
 
 Esto reemplaza temporalmente alert con una función que no muestra nada, pero registra si se llamó y con qué argumentos.
