@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+export CI=true
+
+npm ci
+npx playwright install --with-deps
+npx playwright test

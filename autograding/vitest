@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+export CI=true
+
+npm ci
+npx vitest --run --coverage
